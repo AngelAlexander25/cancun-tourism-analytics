@@ -1,0 +1,13 @@
+year,month,month_name,occupancy,occupancy_percent,estimated_revenue,season
+2026,2,February,0.832,83.2,1123640,Alta
+2026,3,March,0.809,80.9,1091841,Alta
+2026,4,April,0.639,63.9,862325,Baja
+2026,5,May,0.635,63.5,856917,Baja
+2026,6,June,0.72,72.0,971559,Media
+2026,7,July,0.692,69.2,934266,Media
+2026,8,August,0.729,72.9,984422,Media
+2026,8,August,0.739,73.9,997422,Media
+2026,9,September,0.584,58.4,788482,Baja
+2026,10,October,0.57,57.0,769454,Baja
+2026,11,November,0.591,59.1,798074,Baja
+2026,12,December,0.823,82.3,1110719,Alta
