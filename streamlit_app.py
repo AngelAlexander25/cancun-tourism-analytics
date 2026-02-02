@@ -105,7 +105,7 @@ if page == "Dashboard Principal":
             color_continuous_scale='Blues'
         )
         fig.update_layout(showlegend=False, height=400)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
     
     with col2:
         st.subheader("Tendencia Historica 2020-2026")
@@ -126,7 +126,7 @@ if page == "Dashboard Principal":
             showlegend=False
         )
         fig.update_layout(height=400)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
     
     # Ocupacion mensual
     st.markdown("---")
@@ -151,7 +151,7 @@ if page == "Dashboard Principal":
         height=400,
         showlegend=False
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
     
     # Revenue por mes
     col1, col2 = st.columns(2)
@@ -166,7 +166,7 @@ if page == "Dashboard Principal":
             labels={'estimated_revenue': 'Revenue (USD)', 'month_name': 'Mes'}
         )
         fig.update_traces(line_color='green', fillcolor='rgba(0,255,0,0.3)')
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
     
     with col2:
         st.subheader("Distribucion por Temporada")
@@ -178,7 +178,7 @@ if page == "Dashboard Principal":
             title='',
             color_discrete_sequence=['#ff4444', '#ffaa00', '#00cc00']
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
 
 # ============================================
 # PAGINA 2: PREDICCIONES DETALLADAS
@@ -217,7 +217,7 @@ elif page == "Predicciones Detalladas":
         hovermode='x unified',
         height=500
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
     
     # Analisis por semana
     st.markdown("---")
@@ -243,7 +243,7 @@ elif page == "Predicciones Detalladas":
         yaxis_title='Ocupacion (%)',
         height=400
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
     
     # Comparativa Dias de Semana vs Fines de Semana
     col1, col2 = st.columns(2)
@@ -268,7 +268,7 @@ elif page == "Predicciones Detalladas":
         )
         fig.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
         fig.update_layout(showlegend=False)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
     
     with col2:
         st.subheader("Proximos 7 Dias")
@@ -279,7 +279,7 @@ elif page == "Predicciones Detalladas":
         
         st.dataframe(
             next_7[['Dia', 'Ocupacion (%)', 'Tipo']],
-            use_container_width=True,
+            width='stretch',
             hide_index=True
         )
 
@@ -334,7 +334,7 @@ elif page == "Analisis por Pais":
         showlegend=False
     )
     fig.update_layout(height=400)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
     
     # Comparacion con otros paises
     st.markdown("---")
@@ -354,7 +354,7 @@ elif page == "Analisis por Pais":
         labels={'arrivals': 'Turistas', 'country': 'Pais'},
         color_discrete_map={'Seleccionado': 'red', 'Otros': 'lightblue'}
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
 # ============================================
 # PAGINA 4: FORECAST 2027
@@ -404,7 +404,7 @@ else:
         yaxis_title='Turistas',
         height=500
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
     
     # Tabla detallada
     st.markdown("---")
@@ -419,7 +419,7 @@ else:
     
     st.dataframe(
         display[['Pais', 'Llegadas 2026', 'Forecast 2027', 'Crecimiento (%)', 'Interes Google']],
-        use_container_width=True,
+        width='stretch',
         hide_index=True
     )
 
